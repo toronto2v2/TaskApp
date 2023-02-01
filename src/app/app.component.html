@@ -5,19 +5,17 @@
          name="password"
          class="input"
          [(ngModel)] = 'password'
-         (input) = 'onInputChange()'>
+         (input) = 'onInputChange(password)'
+         >
 
 </form>
 <div class="easy-wrapper">
   <div class="easy-color"
-       [ngClass] = "{'red' : fullInput || easy, 'gray' : !fullInput, 'yellow' : medium, 'green' : hard}"></div>
+       [ngClass] = "{'red' : emptyInput || easy, 'gray' : !emptyInput, 'yellow' : medium, 'green' : hard}"></div>
   <div class="easy-color"
-       [ngClass] = "{'red' : fullInput, 'gray' : !fullInput, 'yellow' : medium, 'green' : hard}"></div>
+       [ngClass] = "{'red' : emptyInput, 'gray' : !emptyInput, 'yellow' : medium, 'green' : hard}"></div>
   <div class="easy-color"
-       [ngClass] = "{'red' : fullInput, 'gray' : !fullInput, 'green' : hard}"></div>
+       [ngClass] = "{'red' : emptyInput, 'gray' : !emptyInput, 'green' : hard}"></div>
 </div>
 
-{{password}}
-{{easy}}
-{{medium}}
-{{hard}}
+
