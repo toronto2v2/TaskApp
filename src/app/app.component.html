@@ -1,21 +1,3 @@
-<h1 class="title"> Test your password strength!</h1>
-<form class="input-Wrapper" >
-  <input placeholder="Enter your password"
-         type="password"
-         name="password"
-         class="input"
-         [(ngModel)] = 'password'
-         (input) = 'onInputChange(password)'
-         >
-
-</form>
-<div class="easy-wrapper">
-  <div class="easy-color"
-       [ngClass] = "{'red' : emptyInput || easy, 'gray' : !emptyInput, 'yellow' : medium, 'green' : hard}"></div>
-  <div class="easy-color"
-       [ngClass] = "{'red' : emptyInput, 'gray' : !emptyInput, 'yellow' : medium, 'green' : hard}"></div>
-  <div class="easy-color"
-       [ngClass] = "{'red' : emptyInput, 'gray' : !emptyInput, 'green' : hard}"></div>
+<div class="main-wrapper">
+     <app-password></app-password>
 </div>
-
-
