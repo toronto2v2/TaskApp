@@ -2,21 +2,21 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PasswordComponent } from './components/testPassword/Password.component';
-
+import { PasswordComponent } from './components/test-password/test-password.component';
+import { PasswordInputComponent } from './components/password-input/password-input.component';
+import { PasswordColoredComponent } from './components/password-colored/password-colored.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PasswordComponent
+    PasswordComponent,
+    PasswordInputComponent,
+    PasswordColoredComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
