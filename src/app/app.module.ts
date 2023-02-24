@@ -17,6 +17,7 @@ import { PasswordColoredComponent } from './components/password-colored/password
     BrowserModule,
     FormsModule,
   ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

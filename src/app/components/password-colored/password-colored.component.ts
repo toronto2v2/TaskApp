@@ -1,5 +1,12 @@
 import { Component, Input } from '@angular/core';
 
+interface propsObj {
+  emptyInput: boolean,
+  easy:boolean,
+  medium:boolean,
+  hard: boolean
+}
+
 @Component({
   selector: 'password-colored',
   templateUrl: './password-colored.component.html',
@@ -9,9 +16,6 @@ import { Component, Input } from '@angular/core';
 
 export class PasswordColoredComponent{
 
-  @Input () emptyInput!: boolean;
-  @Input () easy!: boolean;
-  @Input () medium!: boolean;
-  @Input () hard!: boolean;
+  @Input () props!: propsObj;
 
 }

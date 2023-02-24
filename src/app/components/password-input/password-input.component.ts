@@ -1,5 +1,11 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
+interface propsObj {
+  emptyInput: boolean,
+  easy:boolean,
+  medium:boolean,
+  hard: boolean
+}
 
 @Component({
   selector: 'password-input',
@@ -10,17 +16,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 export class PasswordInputComponent{
   password: string = '';
+  @Input () props!: propsObj;
 
-  @Input () emptyInput!: boolean;
-  @Input () easy!: boolean;
-  @Input () medium!: boolean;
-  @Input () hard!: boolean;
   @Output() onChanged = new EventEmitter<string>()
 
   onInputChange(str: string): void {
     this.onChanged.emit(str)
   }
-
-
 
 }
